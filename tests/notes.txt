@@ -1,0 +1,64 @@
+How to run all tests:
+
+Windows PowerShell:
+py src/cache_simulator.py data/ex.in
+
+Linux/macOS:
+python3 src/cache_simulator.py data/ex.in
+
+
+Test 1: ex
+Run:
+py src/cache_simulator.py data/ex.in
+
+Input:
+3 12
+1 2 3 4 1 2 5 1 2 3 4 5
+
+Expected output:
+FIFO  : 9
+LRU   : 10
+OPTFF : 7
+
+
+Test 2, Cache size 1:
+Run:
+py src/cache_simulator.py data/test2.in
+
+1 6
+1 2 1 2 1 2
+
+Reason:
+With a cache size of just 1, every time the requested item changes, old one must be evicted logically
+
+Expected output:
+FIFO  : 6
+LRU   : 6
+OPTFF : 6
+
+
+Error handling checks
+
+1. Invalid cache size
+Input:
+0 4
+1 2 3 4
+
+Expected behavior:
+Program should print an error that cache size must be at least 1
+
+2. Wrong number of requests
+Input:
+3 5
+1 2 3 4
+
+Expected behavior:
+Program should print an error saying the expected number of requests does not match
+
+
+Notes
+My program expects exactly one input file argument
+Output formatting should stay exactly:
+  FIFO  : ---
+  LRU   : ---
+  OPTFF : ---
