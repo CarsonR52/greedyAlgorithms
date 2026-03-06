@@ -28,11 +28,11 @@ Question 1:
 
 Input File  |   k   |   m   |   FIFO    |   LRU     |   OPTFF   |
 
-File 1      |   3   |   54  |   50      |   50      |   32      |
+File 1          |   3   |   54  |   50      |   50      |   32      |
 
-File 2      |   4   |   60  |   58      |   56      |   33      |
+File 2          |   4   |   60  |   58      |   56      |   33      |
 
-File 3      |   3   |   54  |   46      |   44      |   28      |
+File 3          |   3   |   54  |   46      |   44      |   28      |
 
 
 
